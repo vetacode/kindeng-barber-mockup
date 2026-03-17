@@ -1,0 +1,1274 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Don Antonio Haircut & Shave | Barbershop Depok</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      html,
+      body {
+        background: #0e0e0e;
+        color: #fff;
+        line-height: 1.6;
+        overflow-x: hidden;
+        width: 100%;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+        width: 100%;
+      }
+
+      section {
+        padding: 80px 0;
+        text-align: center;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: #d1d1d1;
+      }
+
+      /* NAVBAR */
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 999;
+      }
+
+      .navbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-weight: bold;
+      }
+
+      .logo h2 {
+        margin: 0;
+        font-size: 22px;
+      }
+
+      /* LOGO */
+
+      .logo img {
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      .about-logo {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+
+      .menu {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+      }
+
+      .menu a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .menu a:hover {
+        color: #ffb300;
+      }
+
+      .cta-btn {
+        background: #ffb300;
+        color: #000;
+        padding: 10px 18px;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+        text-decoration: none;
+      }
+
+      .cta-btn:hover {
+        transform: scale(1.05);
+        background: #e6a200;
+      }
+
+      .hamburger {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      /* HERO */
+
+      .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70')
+            center/cover;
+        position: relative;
+        padding-top: 80px;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .hero::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30%;
+        background: linear-gradient(to bottom, transparent, #141414);
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .hero-container {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        width: 100%;
+      }
+
+      .hero-content {
+        flex: 1;
+        text-align: left;
+        max-width: 600px;
+      }
+
+      .hero h1 {
+        font-size: 56px;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        background: linear-gradient(to right, #ffffff, #ffb300);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .hero p {
+        font-size: 18px;
+        margin-bottom: 30px;
+        color: #e0e0e0;
+      }
+
+      .hero-buttons {
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .hero-image {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .hero-image img {
+        width: 100%;
+        max-width: 480px;
+        border-radius: 20px;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 179, 0, 0.2);
+        animation: floating 6s ease-in-out infinite;
+        position: relative;
+        z-index: 2;
+      }
+
+      @keyframes floating {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      /* ABOUT */
+
+      .about {
+        background: #151515;
+      }
+
+      /* SERVICES */
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+      }
+
+      .service {
+        background: #141414;
+        padding: 35px 25px;
+        border-radius: 16px;
+        transition: all 0.4s ease;
+        border: 1px solid #222;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      .service-content h3 {
+        margin-bottom: 10px;
+      }
+
+      .service-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        gap: 15px;
+      }
+
+      .service-price {
+        font-size: 24px;
+        font-weight: 700;
+        color: #ffb300;
+        text-align: center;
+      }
+
+      .service-cta-btn {
+        background: rgba(255, 179, 0, 0.1);
+        color: #ffb300;
+        border: 1px solid rgba(255, 179, 0, 0.3);
+        padding: 12px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        text-align: center;
+        width: 100%;
+        display: block;
+      }
+
+      .service-cta-btn:hover {
+        background: #ffb300;
+        color: #000;
+        transform: translateY(-2px);
+      }
+
+      .service:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(255, 179, 0, 0.1);
+        border-color: rgba(255, 179, 0, 0.3);
+      }
+
+      .service i {
+        font-size: 30px;
+        margin-bottom: 15px;
+        color: #ffb300;
+      }
+
+      /* GALLERY */
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 40px;
+      }
+
+      .gallery-grid img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 16px;
+        transition: all 0.4s ease;
+        border: 1px solid #222;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .gallery-grid img:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(255, 179, 0, 0.15);
+        border-color: rgba(255, 179, 0, 0.3);
+      }
+
+      /* TESTIMONIAL */
+
+      .testimonials {
+        background: #151515;
+      }
+
+      .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .testimonial {
+        background: #1d1d1d;
+        padding: 25px;
+        border-radius: 10px;
+      }
+
+      .stars {
+        color: #ffb300;
+        margin-bottom: 10px;
+      }
+
+      .review-slider {
+        margin-top: 40px;
+        padding-bottom: 50px;
+        position: relative;
+        cursor: grab;
+      }
+
+      .review-slider:active {
+        cursor: grabbing;
+      }
+
+      .review-card {
+        background: #141414;
+        padding: 30px;
+        border-radius: 16px;
+        text-align: left;
+        border: 1px solid #222;
+        transition: all 0.4s ease;
+        height: auto;
+      }
+
+      .review-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(255, 179, 0, 0.08);
+        border-color: rgba(255, 179, 0, 0.2);
+      }
+
+      .review-card p {
+        margin: 10px 0;
+      }
+
+      .swiper-pagination-bullet {
+        background: #444;
+        opacity: 1;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: #ffb300;
+        width: 30px;
+        border-radius: 5px;
+        transition: width 0.3s ease;
+      }
+
+      @keyframes scrollReview {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* CONTACT */
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-top: 40px;
+      }
+
+      iframe {
+        width: 100%;
+        height: 350px;
+        border-radius: 10px;
+        border: none;
+      }
+
+      /* FOOTER */
+
+      footer {
+        background: #0d0d0d;
+        padding: 60px 0 30px;
+        border-top: 1px solid #222;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 50px;
+        text-align: left;
+      }
+
+      .footer-brand-logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        text-decoration: none;
+        color: #fff;
+        margin-bottom: 20px;
+        transition: opacity 0.3s ease;
+      }
+
+      .footer-brand-logo:hover h3 {
+        color: #ffb300;
+      }
+
+      .footer-brand-logo img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .footer-brand-logo h3 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 700;
+        color: #fff;
+        transition: color 0.3s ease;
+      }
+
+      .footer-brand p {
+        color: #aaa;
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      .footer-menu h4 {
+        color: #fff;
+        font-size: 18px;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-menu h4::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 40px;
+        height: 3px;
+        background: #ffb300;
+        border-radius: 2px;
+      }
+
+      .footer-menu a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #aaa;
+        text-decoration: none;
+        margin-bottom: 15px;
+        transition: all 0.3s ease;
+        font-size: 15px;
+      }
+
+      .footer-menu a:hover {
+        color: #ffb300;
+        transform: translateX(5px);
+      }
+
+      .copy {
+        margin-top: 50px;
+        padding-top: 25px;
+        border-top: 1px solid #222;
+        text-align: center;
+        font-size: 14px;
+        color: #777;
+      }
+
+      /* FLOATING WA */
+
+      .whatsapp-float {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        width: 60px;
+        height: 60px;
+        background: #25d366;
+        color: white;
+        font-size: 35px;
+        border-radius: 50%;
+        box-shadow: 0 0 15px rgba(0, 255, 100, 0.6);
+        animation: pulse 2s infinite;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.2);
+        transition: ease-in-out 0.3s;
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+      }
+
+      /* MOBILE */
+
+      @media (max-width: 768px) {
+        .menu {
+          position: fixed;
+          top: -300px;
+          left: 0;
+          width: 100%;
+          background: rgba(17, 17, 17, 0.95);
+          backdrop-filter: blur(10px);
+          flex-direction: column;
+          padding: 20px 0;
+          align-items: center;
+          gap: 20px;
+          transition: top 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          z-index: 998;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .menu.active {
+          top: 70px;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        .hero {
+          padding-top: 100px;
+          padding-bottom: 60px;
+          height: auto;
+        }
+
+        .hero-container {
+          flex-direction: column;
+          text-align: center;
+          gap: 30px;
+        }
+
+        .hero-content {
+          text-align: center;
+        }
+
+        .hero h1 {
+          font-size: 38px;
+        }
+
+        .hero-buttons {
+          justify-content: center;
+        }
+
+        .hero-image {
+          justify-content: center;
+        }
+
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 40px;
+        }
+
+        .footer-brand-logo {
+          justify-content: center;
+        }
+
+        .footer-menu h4::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        .footer-menu a {
+          justify-content: center;
+        }
+
+        .footer-menu a:hover {
+          transform: none;
+          color: #ffb300;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+      <div class="container">
+        <div class="logo">
+          <img
+            src="https://dongkrakusaha.com/gambarbebas/1526720260314-113355_donantonio barbershop.png"
+            alt="Don Antonio Barbershop"
+          />
+          <h2>Don Antonio</h2>
+        </div>
+        <div class="menu" id="menu">
+          <a href="#">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Layanan</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact" class="cta-btn">Hubungi Kami</a>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-content" data-aos="fade-right">
+          <h1>Barbershop Premium di Depok</h1>
+
+          <p>
+            Haircut modern, clean shave, dan pelayanan profesional dengan rating
+            ⭐ 5.0 dari pelanggan.
+          </p>
+
+          <div class="hero-buttons">
+            <a
+              href="https://wa.me/628132150075?text=Halo%20Don%20Antonio%20Haircut%20&%20Shave%2C%20saya%20ingin%20booking%20sekarang."
+              class="cta-btn"
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp"></i> Booking Sekarang
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image" data-aos="fade-left">
+          <img
+            src="https://lh3.googleusercontent.com/p/AF1QipPffwbrmOfxJVpy4seRDgxdyMxKT2oHscJ-dqt4=s677-k"
+            alt="Don Antonio Haircut"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <img
+          class="about-logo"
+          src="https://dongkrakusaha.com/gambarbebas/1526720260314-113355_donantonio barbershop.png"
+        />
+        <h2>About Don Antonio</h2>
+
+        <p
+          style="
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.8;
+          "
+        >
+          <strong>Don Antonio Haircut & Shave</strong> bukan sekadar tempat
+          potong rambut, melainkan pengalaman grooming premium di pusat kota
+          Depok. Dipercaya oleh ratusan pria dan meraih
+          <strong>rating ⭐5.0</strong>, kami konsisten memberikan standar
+          tertinggi untuk <em>haircut modern</em>,
+          <em>classic gentleman's cut</em>, hingga <em>hot towel shaving</em>.
+          Memadukan keahlian para kapster profesional yang update dengan tren
+          terbaru serta suasana yang rileks, kami menjamin setiap tamu keluar
+          dengan tampilan terbaik dan kepuasan maksimal. Buktikan sendiri
+          kualitasnya!
+        </p>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+
+    <section id="services">
+      <div class="container">
+        <h2 data-aos="fade-up">Layanan Kami</h2>
+
+        <div class="services-grid">
+          <!-- Item 1 -->
+          <div class="service" data-aos="zoom-in">
+            <div class="service-content">
+              <i class="fa-solid fa-scissors"></i>
+              <h3>Haircut Men's Only</h3>
+            </div>
+            <div class="service-footer">
+              <div class="service-price">Rp 45.000</div>
+              <a
+                href="https://wa.me/628132150075?text=Halo%20Don%20Antonio%20Haircut%20%26%20Shave%2C%20saya%20ingin%20booking%20layanan%20Haircut%20Men's%20Only%20sekarang."
+                class="service-cta-btn"
+                target="_blank"
+                >Booking</a
+              >
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="service" data-aos="zoom-in" data-aos-delay="100">
+            <div class="service-content">
+              <i class="fa-solid fa-shower"></i>
+              <h3>Haircut Men's + Shampoo</h3>
+            </div>
+            <div class="service-footer">
+              <div class="service-price">Rp 50.000</div>
+              <a
+                href="https://wa.me/628132150075?text=Halo%20Don%20Antonio%20Haircut%20%26%20Shave%2C%20saya%20ingin%20booking%20layanan%20Haircut%20Men's%20%2B%20Shampoo%20sekarang."
+                class="service-cta-btn"
+                target="_blank"
+                >Booking</a
+              >
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="service" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-content">
+              <i class="fa-solid fa-child"></i>
+              <h3>Haircut Kids Only</h3>
+            </div>
+            <div class="service-footer">
+              <div class="service-price">Rp 40.000</div>
+              <a
+                href="https://wa.me/628132150075?text=Halo%20Don%20Antonio%20Haircut%20%26%20Shave%2C%20saya%20ingin%20booking%20layanan%20Haircut%20Kids%20Only%20sekarang."
+                class="service-cta-btn"
+                target="_blank"
+                >Booking</a
+              >
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="service" data-aos="zoom-in">
+            <div class="service-content">
+              <i class="fa-solid fa-sink"></i>
+              <h3>Haircut Kids + Shampoo</h3>
+            </div>
+            <div class="service-footer">
+              <div class="service-price">Rp 45.000</div>
+              <a
+                href="https://wa.me/628132150075?text=Halo%20Don%20Antonio%20Haircut%20%26%20Shave%2C%20saya%20ingin%20booking%20layanan%20Haircut%20Kids%20%2B%20Shampoo%20sekarang."
+                class="service-cta-btn"
+                target="_blank"
+                >Booking</a
+              >
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="service" data-aos="zoom-in" data-aos-delay="100">
+            <div class="service-content">
+              <i class="fa-solid fa-paintbrush"></i>
+              <h3>Black Polish</h3>
+            </div>
+            <div class="service-footer">
+              <div class="service-price">Rp 50.000</div>
+              <a
+                href="https://wa.me/628132150075?text=Halo%20Don%20Antonio%20Haircut%20%26%20Shave%2C%20saya%20ingin%20booking%20layanan%20Black%20Polish%20sekarang."
+                class="service-cta-btn"
+                target="_blank"
+                >Booking</a
+              >
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="service" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-content">
+              <i class="fa-solid fa-face-smile"></i>
+              <h3>Shaves Beard</h3>
+            </div>
+            <div class="service-footer">
+              <div class="service-price">Rp 20.000</div>
+              <a
+                href="https://wa.me/628132150075?text=Halo%20Don%20Antonio%20Haircut%20%26%20Shave%2C%20saya%20ingin%20booking%20layanan%20Shaves%20Beard%20sekarang."
+                class="service-cta-btn"
+                target="_blank"
+                >Booking</a
+              >
+            </div>
+          </div>
+
+          <!-- Item 7 -->
+          <div class="service" data-aos="zoom-in">
+            <div class="service-content">
+              <i class="fa-solid fa-spa"></i>
+              <h3>Hair Treatment Creambath</h3>
+            </div>
+            <div class="service-footer">
+              <div class="service-price">Rp 50.000</div>
+              <a
+                href="https://wa.me/628132150075?text=Halo%20Don%20Antonio%20Haircut%20%26%20Shave%2C%20saya%20ingin%20booking%20layanan%20Hair%20Treatment%20Creambath%20sekarang."
+                class="service-cta-btn"
+                target="_blank"
+                >Booking</a
+              >
+            </div>
+          </div>
+
+          <!-- Item 8 -->
+          <div class="service" data-aos="zoom-in" data-aos-delay="100">
+            <div class="service-content">
+              <i class="fa-solid fa-water"></i>
+              <h3>
+                Hair Perming<br /><span
+                  style="font-size: 14px; font-weight: normal; color: #aaa"
+                  >(Include Cuts)</span
+                >
+              </h3>
+            </div>
+            <div class="service-footer">
+              <div class="service-price">Rp 300.000</div>
+              <a
+                href="https://wa.me/628132150075?text=Halo%20Don%20Antonio%20Haircut%20%26%20Shave%2C%20saya%20ingin%20booking%20layanan%20Hair%20Perming%20sekarang."
+                class="service-cta-btn"
+                target="_blank"
+                >Booking</a
+              >
+            </div>
+          </div>
+
+          <!-- Item 9 -->
+          <div class="service" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-content">
+              <i class="fa-solid fa-palette"></i>
+              <h3>
+                Hair Color Full<br /><span
+                  style="font-size: 14px; font-weight: normal; color: #aaa"
+                  >(Include Cuts)</span
+                >
+              </h3>
+            </div>
+            <div class="service-footer">
+              <div class="service-price">Rp 350.000</div>
+              <a
+                href="https://wa.me/628132150075?text=Halo%20Don%20Antonio%20Haircut%20%26%20Shave%2C%20saya%20ingin%20booking%20layanan%20Hair%20Color%20Full%20sekarang."
+                class="service-cta-btn"
+                target="_blank"
+                >Booking</a
+              >
+            </div>
+          </div>
+
+          <!-- Item 10 -->
+          <div class="service" data-aos="zoom-in">
+            <div class="service-content">
+              <i class="fa-solid fa-star"></i>
+              <h3>
+                Hair Color Highlight<br /><span
+                  style="font-size: 14px; font-weight: normal; color: #aaa"
+                  >(Include Cuts)</span
+                >
+              </h3>
+            </div>
+            <div class="service-footer">
+              <div class="service-price">Rp 400.000</div>
+              <a
+                href="https://wa.me/628132150075?text=Halo%20Don%20Antonio%20Haircut%20%26%20Shave%2C%20saya%20ingin%20booking%20layanan%20Hair%20Color%20Highlight%20sekarang."
+                class="service-cta-btn"
+                target="_blank"
+                >Booking</a
+              >
+            </div>
+          </div>
+
+          <!-- Item 11 -->
+          <div class="service" data-aos="zoom-in" data-aos-delay="100">
+            <div class="service-content">
+              <i class="fa-solid fa-bolt"></i>
+              <h3>
+                Hair Bleaching Highlight<br /><span
+                  style="font-size: 14px; font-weight: normal; color: #aaa"
+                  >(Include Cuts)</span
+                >
+              </h3>
+            </div>
+            <div class="service-footer">
+              <div class="service-price">Rp 350.000</div>
+              <a
+                href="https://wa.me/628132150075?text=Halo%20Don%20Antonio%20Haircut%20%26%20Shave%2C%20saya%20ingin%20booking%20layanan%20Hair%20Bleaching%20Highlight%20sekarang."
+                class="service-cta-btn"
+                target="_blank"
+                >Booking</a
+              >
+            </div>
+          </div>
+
+          <!-- Item 12 -->
+          <div class="service" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-content">
+              <i class="fa-solid fa-sun"></i>
+              <h3>
+                Hair Bleaching Full<br /><span
+                  style="font-size: 14px; font-weight: normal; color: #aaa"
+                  >(Include Cuts)</span
+                >
+              </h3>
+            </div>
+            <div class="service-footer">
+              <div class="service-price">Rp 300.000</div>
+              <a
+                href="https://wa.me/628132150075?text=Halo%20Don%20Antonio%20Haircut%20%26%20Shave%2C%20saya%20ingin%20booking%20layanan%20Hair%20Bleaching%20Full%20sekarang."
+                class="service-cta-btn"
+                target="_blank"
+                >Booking</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+
+    <section id="gallery" class="about">
+      <div class="container">
+        <h2 data-aos="fade-up">Gallery</h2>
+
+        <div class="gallery-grid">
+          <img
+            src="https://dongkrakusaha.com/gambarbebas/1526720260315-103536_barber 3.png"
+            data-aos="zoom-in"
+            alt="Gallery Barbershop 1"
+          />
+
+          <img
+            src="https://dongkrakusaha.com/gambarbebas/1526720260315-103536_barber 2.png"
+            data-aos="zoom-in"
+            alt="Gallery Barbershop 2"
+          />
+
+          <img
+            src="https://dongkrakusaha.com/gambarbebas/1526720260315-104825_barber 8.png"
+            data-aos="zoom-in"
+            alt="Gallery Barbershop 3"
+          />
+
+          <img
+            src="https://dongkrakusaha.com/gambarbebas/1526720260315-104155_barber 6.png"
+            data-aos="zoom-in"
+            alt="Gallery Barbershop 4"
+          />
+
+          <img
+            src="https://dongkrakusaha.com/gambarbebas/1526720260315-104155_barber 4.png"
+            data-aos="zoom-in"
+            alt="Gallery Barbershop 5"
+          />
+
+          <img
+            src="https://dongkrakusaha.com/gambarbebas/1526720260315-103536_barber 1.png"
+            data-aos="zoom-in"
+            alt="Gallery Barbershop 6"
+          />
+
+          <img
+            src="https://dongkrakusaha.com/gambarbebas/1526720260315-104155_barber 5.png"
+            data-aos="zoom-in"
+            alt="Gallery Barbershop 7"
+          />
+
+          <img
+            src="https://dongkrakusaha.com/gambarbebas/1526720260315-104825_barber 7.png"
+            data-aos="zoom-in"
+            alt="Gallery Barbershop 8"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL -->
+
+    <section class="testimonials">
+      <div class="container">
+        <h2 data-aos="fade-up">Review Pelanggan</h2>
+
+        <div class="swiper review-slider" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                Masny ramah tamah. Potongan ny cakep sangat puas sama hasilnya.
+              </p>
+              <strong>Masber Officiall</strong>
+            </div>
+
+            <div class="swiper-slide review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                Jujur puas banget. Potongannya rapi, layernya pas, dan pas
+                distyling di rumah pun tetap gampang diatur.
+              </p>
+              <strong>Muhammad Ihsan Zaini</strong>
+            </div>
+
+            <div class="swiper-slide review-card">
+              <div class="stars">★★★★★</div>
+              <p>Keren banget. Recommended banget buat hair coloring.</p>
+              <strong>Ahmad Jabbar</strong>
+            </div>
+
+            <div class="swiper-slide review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                Kapster berpengalaman dan tau berbagai macam model gaya rambut.
+                Asik juga orangnya.
+              </p>
+              <strong>Jihan Maulana</strong>
+            </div>
+
+            <div class="swiper-slide review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                Untuk pelayanan oke banget. Tau segala model potongan rambut
+                terkini.
+              </p>
+              <strong>Mbuy Arbani</strong>
+            </div>
+
+            <div class="swiper-slide review-card">
+              <div class="stars">★★★★★</div>
+              <p>Potongan bagus sesuai dengan kemauan saya. Comma X Wolf.</p>
+              <strong>Henky Bong</strong>
+            </div>
+
+            <div class="swiper-slide review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                Good job untuk potongan rambutnya. Anak-anak sama suami jadi
+                ganteng.
+              </p>
+              <strong>Ng Syifa</strong>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT -->
+
+    <section id="contact">
+      <div class="container">
+        <h2 data-aos="fade-up">Lokasi Kami</h2>
+
+        <div class="contact-grid">
+          <div data-aos="fade-right">
+            <p>
+              Samping RM Padang Minang Putra<br />
+              Depan Kantor Cimanggis Golf Estate<br />
+              Jl. Cimanggis Boulevard, Tapos, Depok
+            </p>
+
+            <br />
+
+            <a
+              href="https://wa.me/628132150075?text=Halo%20Don%20Antonio%20Haircut%20&%20Shave%2C%20saya%20ingin%20booking%20sekarang."
+              class="cta-btn"
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp"></i> Chat Sekarang
+            </a>
+          </div>
+
+          <div data-aos="fade-left">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15859.123327097252!2d106.87326908715818!3d-6.422200000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eb006934802b%3A0xcb08f68df70d6e37!2sBARBERSHOP%20DON%20ANTONIO%20HAIRCUT%20%26%20SHAVE!5e0!3m2!1sen!2sid!4v1773503242078!5m2!1sen!2sid"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#" class="footer-brand-logo">
+              <img
+                src="https://dongkrakusaha.com/gambarbebas/1526720260314-113355_donantonio barbershop.png"
+                alt="Don Antonio Logo"
+              />
+              <h3>Don Antonio Haircut & Shave</h3>
+            </a>
+            <p>
+              Barbershop profesional di Depok dengan layanan haircut modern,
+              hair styling, dan shaving terbaik dengan rating pelanggan ⭐5.0.
+              Kepuasan pelanggan adalah prioritas utama kami.
+            </p>
+          </div>
+
+          <div class="footer-menu">
+            <h4>Menu</h4>
+            <a href="#"
+              ><i class="fas fa-chevron-right" style="font-size: 12px"></i>
+              Home</a
+            >
+            <a href="#about"
+              ><i class="fas fa-chevron-right" style="font-size: 12px"></i>
+              Tentang Kami</a
+            >
+            <a href="#services"
+              ><i class="fas fa-chevron-right" style="font-size: 12px"></i>
+              Layanan</a
+            >
+            <a href="#gallery"
+              ><i class="fas fa-chevron-right" style="font-size: 12px"></i>
+              Gallery</a
+            >
+            <a href="#contact"
+              ><i class="fas fa-chevron-right" style="font-size: 12px"></i>
+              Kontak</a
+            >
+          </div>
+
+          <div class="footer-menu">
+            <h4>Kontak</h4>
+            <a
+              href="https://wa.me/628132150075?text=Halo%20Don%20Antonio%20Haircut%20&%20Shave%2C%20saya%20ingin%20booking%20sekarang."
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp" style="font-size: 18px"></i> WhatsApp
+            </a>
+            <a
+              href="https://www.instagram.com/donantonio_barberstudio/"
+              target="_blank"
+            >
+              <i class="fab fa-instagram" style="font-size: 18px"></i> Instagram
+            </a>
+          </div>
+        </div>
+
+        <div class="copy">
+          © 2026 Don Antonio Haircut & Shave. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/628132150075?text=Halo%20Don%20Antonio%20Haircut%20&%20Shave%2C%20saya%20ingin%20booking%20sekarang."
+      class="whatsapp-float"
+      target="_blank"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+
+      // Initialize Swiper
+      const swiper = new Swiper('.review-slider', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+
+      function toggleMenu() {
+        document.getElementById('menu').classList.toggle('active');
+      }
+
+      // Close mobile menu when clicking a link
+      document.querySelectorAll('.menu a').forEach((link) => {
+        link.addEventListener('click', () => {
+          document.getElementById('menu').classList.remove('active');
+        });
+      });
+    </script>
+  </body>
+</html>
